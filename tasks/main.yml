@@ -1,7 +1,7 @@
 ---
 - name: Ajout des libs pour la génération du PDF
   package:
-    name: libfontconfig1
+    name: fontconfig
     state: present
 
 - name: Copie du fichier html
