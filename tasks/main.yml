@@ -2,7 +2,7 @@
 - name: Copie du fichier html
   template:
     src: index.html.j2
-    dest: "{{ html-resume_webroot }}/index.html }}"
+    dest: "{{ htmlresume_webroot }}/index.html }}"
   notify:
     - generate pdf
 
