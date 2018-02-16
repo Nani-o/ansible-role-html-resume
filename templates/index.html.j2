@@ -112,7 +112,7 @@
 {% for experience in htmlresume_experience %}
                 <h2>{{ experience.company }}<span>{{ experience.job_title }} - {{ experience.location }} - {{ experience.time_period }}</span></h2>
                 <ul>
-  {% for achievement in htmlresume_achievements %}
+  {% for achievement in experience.achievements %}
     {% if achievement is mapping %}
                     <li>{{ achievement.achievement }}</li>
                     <ul>
