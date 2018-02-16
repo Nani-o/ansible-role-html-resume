@@ -1,0 +1,3 @@
+---
+- name: generate pdf
+  shell: "/usr/local/bin/phantomjs /usr/local/share/phantomjs/htmltopdf.js {{ html-resume_webroot }}/index.html {{ html-resume_webroot }}/cv_{{ html-resume_fullname | lower | regex_replace (' ', '') }}"

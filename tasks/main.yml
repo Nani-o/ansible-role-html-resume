@@ -1,0 +1,22 @@
+---
+- name: Copie du fichier html
+  template:
+    src: index.html.j2
+    dest: "{{ html-resume_webroot }}/index.html }}"
+  notify:
+    - generate pdf
+
+- name: Récupération de phantomjs
+  get_url:
+    url: https://github.com/ariya/phantomjs/releases/download/2.1.3/phantomjs
+    dest: "/usr/local/bin/"
+
+- name: Création d'un dossier pour le script phantomjs
+  file:
+    path: /usr/local/share/phantomjs
+    state: directory
+
+- name: Copie du script phantomjs
+  copy:
+    src: htmltopdf.js
+    dest: /usr/local/share/phantomjs
