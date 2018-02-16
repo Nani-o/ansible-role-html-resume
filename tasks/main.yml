@@ -1,8 +1,11 @@
 ---
 - name: Ajout des libs pour la génération du PDF
   package:
-    name: fontconfig
+    name: "{{ item }}"
     state: present
+  with_items:
+    - fontconfig
+    - openssl-devel
 
 - name: Copie du fichier html
   template:
