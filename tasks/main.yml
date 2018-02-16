@@ -1,4 +1,9 @@
 ---
+- name: Ajout des libs pour la génération du PDF
+  package:
+    name: libfontconfig1
+    state: present
+
 - name: Copie du fichier html
   template:
     src: index.html.j2
