@@ -5,7 +5,6 @@
     state: present
   with_items:
     - fontconfig
-    - openssl-devel
 
 - name: Copie du fichier html
   template:
