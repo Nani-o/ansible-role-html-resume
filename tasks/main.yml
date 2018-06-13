@@ -7,16 +7,16 @@
 - name: Copie du fichier html
   template:
     src: index.html.j2
-    dest: "{{ htmlresume_webroot }}/index.html"
+    dest: "{{ htmlresume_html_file }}"
   notify:
     - generate pdf
 
 - name: Création d'un dossier pour le script phantomjs
   file:
-    path: /usr/local/share/phantomjs
+    path: "{{ htmlresume_phantomjs_script_path }}"
     state: directory
 
 - name: Copie du script phantomjs
   copy:
     src: htmltopdf.js
-    dest: /usr/local/share/phantomjs
+    dest: "{{ htmlresume_phantomjs_script_path }}"

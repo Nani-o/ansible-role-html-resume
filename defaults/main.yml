@@ -1,0 +1,4 @@
+---
+htmlresume_html_file: "{{ htmlresume_webroot }}/index.html"
+htmlresume_pdf_file: "{{ htmlresume_webroot }}/cv_{{ htmlresume_fullname | lower | regex_replace (' ', '') }}.pdf"
+htmlresume_phantomjs_script_path: "/usr/local/share/phantomjs"
