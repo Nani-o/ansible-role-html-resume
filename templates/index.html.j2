@@ -87,7 +87,7 @@
             <dt>Compétences techniques</dt>
             <dd>
                 <p>
-{% for family, skills in htmlresume_skills.iteritems() %}
+{% for family, skills in htmlresume_skills.items() %}
                     <strong>{{ family }} : </strong>{{ skills }}<br>
 {% endfor %}
                 </p>
