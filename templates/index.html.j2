@@ -63,6 +63,7 @@
                 <p>
                     <strong>Téléphone : </strong><span class="tel">{{ htmlresume_telephone }}</span><br />
                     <strong>Email : </strong><a class="email" href="mailto:{{ htmlresume_email }}">{{ htmlresume_email }}</a><br />
+                    <strong>Telegram : </strong><a href="{{ htmlresume_telegram }}">@{{ (htmlresume_telegram.split('/') | reject('equalto', '') | list)[-1] }}</a><br/>
                     <strong>Github : </strong><a href="{{ htmlresume_github }}">{{ htmlresume_github }}</a><br/>
                     <strong>CV : </strong><a href="./{{ htmlresume_pdf_file | basename }}" download>PDF</a>
                 </p>
